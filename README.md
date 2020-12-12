@@ -28,7 +28,7 @@ const App = () => {
 }
 ```
 
-![demo](example/assets/dynamic_field.git)
+![demo](example/assets/dynamic_field.gif)
 
 ## License
 
