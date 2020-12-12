@@ -4,7 +4,7 @@
   "description": "A package to make it easy to auto add fields in react and collect the data",
   "author": "OlivierJM",
   "license": "MIT",
-  "repository": "OlivierJM/react-dynamic-fields",
+  "repository": "OlivierJM/dynamic-form-fields",
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
   "source": "src/index.tsx",
