@@ -1,6 +1,6 @@
 {
   "name": "react-dynamic-fields",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "A package to make it easy to auto add fields in react and collect the data",
   "author": "OlivierJM",
   "license": "MIT",
