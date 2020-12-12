@@ -13,15 +13,18 @@ npm install --save react-dynamic-fields
 ## Usage
 
 ```tsx
-import React, { Component } from 'react'
+import React from 'react'
+import SingleField from 'react-dynamic-fields'
 
-import MyComponent from 'react-dynamic-fields'
-import 'react-dynamic-fields/dist/index.css'
-
-class Example extends Component {
-  render() {
-    return <MyComponent />
-  }
+const App = () => {
+  const [options, setOptions] = React.useState([''])
+  return (
+    <SingleField
+      options={options}
+      setOptions={setOptions}
+      label='Types of fruits'
+    />
+  )
 }
 ```
 

@@ -1,7 +1,5 @@
 import React from 'react'
-
 import { SingleField } from 'react-dynamic-fields'
-import 'react-dynamic-fields/dist/index.css'
 
 const App = () => {
   const [options, setOptions] = React.useState([''])

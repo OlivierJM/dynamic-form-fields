@@ -1,7 +1,7 @@
-import { ExampleComponent } from '.'
+import { SingleField } from '.'
 
 describe('ExampleComponent', () => {
   it('is truthy', () => {
-    expect(ExampleComponent).toBeTruthy()
+    expect(SingleField).toBeTruthy()
   })
 })
