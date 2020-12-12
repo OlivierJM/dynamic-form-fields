@@ -17,11 +17,11 @@
     "@types/node": "link:../node_modules/@types/node",
     "@types/react": "link:../node_modules/@types/react",
     "@types/react-dom": "link:../node_modules/@types/react-dom",
-    "react": "link:../node_modules/react",
+    "react": "^17.0.1",
     "react-dom": "link:../node_modules/react-dom",
+    "react-dynamic-fields": "link:..",
     "react-scripts": "link:../node_modules/react-scripts",
-    "typescript": "link:../node_modules/typescript",
-    "react-dynamic-fields": "link:.."
+    "typescript": "link:../node_modules/typescript"
   },
   "devDependencies": {
     "@babel/plugin-syntax-object-rest-spread": "^7.8.3"
