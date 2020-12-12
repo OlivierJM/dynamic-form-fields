@@ -28,6 +28,8 @@ const App = () => {
 }
 ```
 
+![demo](example/assets/dynamic_field.git)
+
 ## License
 
 MIT © [OlivierJM](https://github.com/OlivierJM)
