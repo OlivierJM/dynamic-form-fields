@@ -1,10 +1,9 @@
-import * as React from 'react'
-import styles from './styles.module.css'
+// import * as React from 'react'
+// import styles from './styles.module.css'
+import SingleField from './SingleField'
 
-interface Props {
-  text: string
-}
+// interface Props {
+//   text: string
+// }
 
-export const ExampleComponent = ({ text }: Props) => {
-  return <div className={styles.test}>Example Component: {text}</div>
-}
+export { SingleField }
