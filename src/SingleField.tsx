@@ -1,8 +1,8 @@
 import * as React from 'react'
 
 interface Props {
-  options: [string]
-  setOptions: (x: any) => {}
+  options: string[]
+  setOptions: (x: any) => {} | void
   label: string
 }
 
