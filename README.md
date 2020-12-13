@@ -46,11 +46,13 @@ const App = () => {
   )
 }
 ```
-Single Option demo
+Single Option demo   
+
 ![demo](example/assets/dynamic_field.gif)
 
-Single and Double Field Options demo
-![demo](example/assets/dynamic_field.gif)
+Single and Double Field Options demo   
+
+![demo](example/assets/dynamic_field2.gif)
 
 ## License
 
