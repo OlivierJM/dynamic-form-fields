@@ -1,3 +1,4 @@
 import SingleField from './SingleField'
+import DoubleField from './DoubleField'
 
-export { SingleField }
+export { SingleField, DoubleField }
