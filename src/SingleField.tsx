@@ -34,12 +34,16 @@ export default function SingleField({ options, setOptions, label }: Props) {
             placeholder={`type your ${label}`}
             value={options[i]}
             onChange={(event) => handleOptionChange(event, i)}
+            data-testid='option_field'
             autoFocus
           />
           <button onClick={() => handleRemoveOption(i)}>remove</button>
         </div>
       ))}
-      <button onClick={handleAddOption}>{`add ${label}`}</button>
+      <button
+        data-testid='add_field'
+        onClick={handleAddOption}
+      >{`add ${label}`}</button>
     </React.Fragment>
   )
 }

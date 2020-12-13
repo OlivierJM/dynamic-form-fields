@@ -14,20 +14,42 @@ npm install --save react-dynamic-fields
 
 ```tsx
 import React from 'react'
-import SingleField from 'react-dynamic-fields'
+import { SingleField, DoubleField } from 'react-dynamic-fields'
 
 const App = () => {
+  const nums = {
+    value: '',
+    category: ''
+  }
   const [options, setOptions] = React.useState([''])
+  const [numbers, setNumbers] = React.useState([nums])
+
   return (
-    <SingleField
-      options={options}
-      setOptions={setOptions}
-      label='Types of fruits'
-    />
+    <React.Fragment>
+      <SingleField
+        options={options}
+        setOptions={setOptions}
+        label='Types of fruits'
+      />
+
+      <DoubleField
+        options={numbers}
+        setOptions={setNumbers}
+        initialValue={nums}
+        data={{
+          label: 'Fruits',
+          name: 'fruits',
+          types: options
+        }}
+      />
+    </React.Fragment>
   )
 }
 ```
+Single Option demo
+![demo](example/assets/dynamic_field.gif)
 
+Single and Double Field Options demo
 ![demo](example/assets/dynamic_field.gif)
 
 ## License
