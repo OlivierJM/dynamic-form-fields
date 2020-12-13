@@ -55,6 +55,7 @@ export default function DoubleField({
             value={options[i][data.name]}
             onChange={(event) => handleChange(event, i)}
             name={data.name}
+            data-testid='option_field'
             autoFocus
           />
           <select
@@ -63,13 +64,18 @@ export default function DoubleField({
             onChange={(event) => handleChange(event, i)}
           >
             {data.types.map((type: string) => (
-              <option value={type}>{type}</option>
+              <option key={type} value={type}>
+                {type}
+              </option>
             ))}
           </select>
           <button onClick={() => handleRemoveField(i)}>remove</button>
         </div>
       ))}
-      <button onClick={handleAddField}>{`add ${data.label}`}</button>
+      <button
+        data-testid='add_field'
+        onClick={handleAddField}
+      >{`add ${data.label}`}</button>
     </React.Fragment>
   )
 }
