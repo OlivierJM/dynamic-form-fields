@@ -1,4 +1,5 @@
 import * as React from 'react'
+import PropTypes from 'prop-types'
 
 interface Props {
   options: string[]
@@ -46,4 +47,10 @@ export default function SingleField({ options, setOptions, label }: Props) {
       >{`add ${label}`}</button>
     </React.Fragment>
   )
+}
+
+SingleField.propTypes = {
+  label: PropTypes.string.isRequired,
+  options: PropTypes.arrayOf(PropTypes.string).isRequired,
+  setOptions: PropTypes.func.isRequired
 }
