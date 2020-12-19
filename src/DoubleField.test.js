@@ -21,7 +21,7 @@ describe('DoubleField Component', () => {
       <DoubleField
         options={nums}
         setOptions={updateMock}
-        initialValue={nums}
+        initialValue={nums[0]}
         data={{
           label: 'Fruits',
           name: 'fruits',

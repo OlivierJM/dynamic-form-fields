@@ -1,5 +1,5 @@
 import React from 'react'
-
+import PropTypes from 'prop-types'
 interface DataProps {
   name: string
   label: string
@@ -78,4 +78,19 @@ export default function DoubleField({
       >{`add ${data.label}`}</button>
     </React.Fragment>
   )
+}
+
+const ValueType = {
+  value: PropTypes.string,
+  category: PropTypes.string
+}
+
+DoubleField.propTypes = {
+  data: PropTypes.shape({
+    label: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    types: PropTypes.arrayOf(PropTypes.string)
+  }).isRequired,
+  options: PropTypes.arrayOf(PropTypes.shape({ ...ValueType })).isRequired,
+  initialValue: PropTypes.shape({ ...ValueType })
 }
