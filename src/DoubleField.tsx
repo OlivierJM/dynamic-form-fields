@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 interface DataProps {
   name: string
   label: string
-  types: [string]
+  types: string[]
 }
 
 interface OptionProps {
@@ -12,9 +12,9 @@ interface OptionProps {
 
 interface Props {
   data: DataProps
-  options: [OptionProps]
-  setOptions: (x: any) => {}
-  label: string
+  options: OptionProps[]
+  setOptions: (x: any) => {} | void
+  label?: string
   initialValue: OptionProps
 }
 

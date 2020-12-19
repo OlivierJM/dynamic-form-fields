@@ -2,8 +2,8 @@ import * as React from 'react'
 import PropTypes from 'prop-types'
 
 interface Props {
-  options: [string]
-  setOptions: (x: any) => {}
+  options: string[]
+  setOptions: (x: any) => {} | void
   label: string
 }
 
