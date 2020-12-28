@@ -60,5 +60,11 @@
   },
   "files": [
     "dist"
-  ]
+  ],
+  "dependencies": {
+    "@types/react-icons": "^3.0.0",
+    "@types/styled-components": "^5.1.7",
+    "styled-components": "^5.2.1",
+    "styled-theming": "^2.2.0"
+  }
 }

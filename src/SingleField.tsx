@@ -1,5 +1,6 @@
 import * as React from 'react'
 import PropTypes from 'prop-types'
+import {Button, Input, AddIcon, DeleteIcon, FormsContainer} from './Theme'
 
 interface Props {
   options: string[]
@@ -30,21 +31,30 @@ export default function SingleField({ options, setOptions, label }: Props) {
   return (
     <React.Fragment>
       {options.map((_option, i) => (
-        <div key={i}>
-          <input
-            placeholder={`type your ${label}`}
-            value={options[i]}
-            onChange={(event) => handleOptionChange(event, i)}
-            data-testid='option_field'
-            autoFocus
-          />
-          <button onClick={() => handleRemoveOption(i)}>remove</button>
+        <div key={i} className="forms-div">
+          <FormsContainer>
+          <Input
+                  placeholder={`Add ${label}`}
+                  value={options[i]}
+                  onChange={(event) => handleOptionChange(event, i)}
+                  data-testid='option_field'
+                  autoFocus
+                />
+                <Button 
+                  data-testid='add_field'
+                  onClick={handleAddOption}>
+                  <AddIcon/>
+               </Button>
+                <Button 
+                  data-testid='add_field'
+                  onClick={() => handleRemoveOption(i)}>
+                  <DeleteIcon/>
+                </Button>
+
+          </FormsContainer>
+               
         </div>
       ))}
-      <button
-        data-testid='add_field'
-        onClick={handleAddOption}
-      >{`add ${label}`}</button>
     </React.Fragment>
   )
 }

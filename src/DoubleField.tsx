@@ -1,5 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import {Button, Input, AddIcon, DeleteIcon, FormsContainer, Select, Option} from './Theme'
+
 interface DataProps {
   name: string
   label: string
@@ -50,32 +52,40 @@ export default function DoubleField({
     <React.Fragment>
       {options.map((_option: OptionProps, i: number) => (
         <div key={i}>
-          <input
-            placeholder={`type your ${data.label}`}
-            value={options[i][data.name]}
-            onChange={(event) => handleChange(event, i)}
-            name={data.name}
-            data-testid='option_field'
-            autoFocus
-          />
-          <select
-            name='category'
-            value={_option.category}
-            onChange={(event) => handleChange(event, i)}
-          >
-            {data.types.map((type: string) => (
-              <option key={type} value={type}>
-                {type}
-              </option>
-            ))}
-          </select>
-          <button onClick={() => handleRemoveField(i)}>remove</button>
+              <FormsContainer>
+
+                  <Select
+                      name='category'
+                      value={_option.category}
+                      onChange={(event) => handleChange(event, i)}
+                    >
+                      {data.types.map((type: string) => (
+                        <Option key={type} value={type}>
+                          {type}
+                        </Option>
+                      ))}
+                 </Select>
+                  <Input
+                    placeholder={`Add ${data.label}`}
+                    value={options[i][data.name]}
+                    onChange={(event) => handleChange(event, i)}
+                    name={data.name}
+                    data-testid='option_field'
+                    autoFocus />
+                  <Button 
+                    data-testid='add_field'
+                    onClick={handleAddField}>
+                    <AddIcon/>
+                  </Button>
+                  <Button 
+                    data-testid='add_field'
+                    onClick={() => handleRemoveField(i)}>
+                    <DeleteIcon/>
+                  </Button>
+              </FormsContainer>
+               
         </div>
       ))}
-      <button
-        data-testid='add_field'
-        onClick={handleAddField}
-      >{`add ${data.label}`}</button>
     </React.Fragment>
   )
 }
