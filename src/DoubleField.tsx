@@ -1,6 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import {Button, Input, AddIcon, DeleteIcon, FormsContainer, Select, Option} from './Theme'
+import {
+  Button,
+  Input,
+  AddIcon,
+  DeleteIcon,
+  FormsContainer,
+  Select,
+  Option
+} from './Theme'
 
 interface DataProps {
   name: string
@@ -52,38 +60,40 @@ export default function DoubleField({
     <React.Fragment>
       {options.map((_option: OptionProps, i: number) => (
         <div key={i}>
-              <FormsContainer>
-
-                  <Select
-                      name='category'
-                      value={_option.category}
-                      onChange={(event) => handleChange(event, i)}
-                    >
-                      {data.types.map((type: string) => (
-                        <Option key={type} value={type}>
-                          {type}
-                        </Option>
-                      ))}
-                 </Select>
-                  <Input
-                    placeholder={`Add ${data.label}`}
-                    value={options[i][data.name]}
-                    onChange={(event) => handleChange(event, i)}
-                    name={data.name}
-                    data-testid='option_field'
-                    autoFocus />
-                  <Button 
-                    data-testid='add_field'
-                    onClick={handleAddField}>
-                    <AddIcon/>
-                  </Button>
-                  <Button 
-                    data-testid='add_field'
-                    onClick={() => handleRemoveField(i)}>
-                    <DeleteIcon/>
-                  </Button>
-              </FormsContainer>
-               
+          <FormsContainer>
+            <Select
+              name='category'
+              value={_option.category}
+              onChange={(event: React.ChangeEvent<HTMLSelectElement>) =>
+                handleChange(event, i)
+              }
+            >
+              {data.types.map((type: string) => (
+                <Option key={type} value={type}>
+                  {type}
+                </Option>
+              ))}
+            </Select>
+            <Input
+              placeholder={`Add ${data.label}`}
+              value={options[i][data.name]}
+              onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
+                handleChange(event, i)
+              }
+              name={data.name}
+              data-testid='option_field'
+              autoFocus
+            />
+            <Button data-testid='add_field' onClick={handleAddField}>
+              <AddIcon />
+            </Button>
+            <Button
+              data-testid='add_field'
+              onClick={() => handleRemoveField(i)}
+            >
+              <DeleteIcon />
+            </Button>
+          </FormsContainer>
         </div>
       ))}
     </React.Fragment>
