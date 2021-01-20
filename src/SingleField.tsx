@@ -42,7 +42,7 @@ export default function SingleField({ options, setOptions, label }: Props) {
         </div>
       ))}
       <button data-testid='add_field' onClick={handleAddOption}>
-        {label ? label : 'add Item'}
+        {label || 'add Item'}
       </button>
     </React.Fragment>
   )
