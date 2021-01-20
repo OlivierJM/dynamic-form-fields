@@ -14,8 +14,8 @@ describe('SingleField', () => {
         label='Types of fruits'
       />
     )
-    expect(container.queryByText('add Types of fruits')).toBeInTheDocument()
-    expect(container.queryByText('add Types of fruits')).not.toBeDisabled()
+    expect(container.queryByText('Types of fruits')).toBeInTheDocument()
+    expect(container.queryByText('Types of fruits')).not.toBeDisabled()
     expect(container.queryAllByText('remove')[0]).not.toBeDisabled()
     expect(container.queryAllByText('remove')).toHaveLength(3)
     expect(
@@ -26,7 +26,7 @@ describe('SingleField', () => {
     ).toHaveLength(3)
 
     expect(container.queryByTestId('add_field')).toHaveTextContent(
-      'add Types of fruits'
+      'Types of fruits'
     )
 
     fireEvent.change(container.queryAllByTestId('option_field')[0], {

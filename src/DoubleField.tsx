@@ -72,10 +72,9 @@ export default function DoubleField({
           <button onClick={() => handleRemoveField(i)}>remove</button>
         </div>
       ))}
-      <button
-        data-testid='add_field'
-        onClick={handleAddField}
-      >{`add ${data.label}`}</button>
+      <button data-testid='add_field' onClick={handleAddField}>
+        {data.label ? data.label : 'add Items'}
+      </button>
     </React.Fragment>
   )
 }

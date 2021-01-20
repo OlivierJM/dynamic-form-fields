@@ -41,10 +41,9 @@ export default function SingleField({ options, setOptions, label }: Props) {
           <button onClick={() => handleRemoveOption(i)}>remove</button>
         </div>
       ))}
-      <button
-        data-testid='add_field'
-        onClick={handleAddOption}
-      >{`add ${label}`}</button>
+      <button data-testid='add_field' onClick={handleAddOption}>
+        {label ? label : 'add Item'}
+      </button>
     </React.Fragment>
   )
 }

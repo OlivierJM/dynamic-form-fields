@@ -29,8 +29,8 @@ describe('DoubleField Component', () => {
         }}
       />
     )
-    expect(container.queryByText('add Fruits')).toBeInTheDocument()
-    expect(container.queryByText('add Fruits')).not.toBeDisabled()
+    expect(container.queryByText('Fruits')).toBeInTheDocument()
+    expect(container.queryByText('Fruits')).not.toBeDisabled()
     expect(container.queryAllByText('remove')[0]).not.toBeDisabled()
     expect(container.queryAllByText('remove')).toHaveLength(2)
     expect(
@@ -38,7 +38,7 @@ describe('DoubleField Component', () => {
     ).toBeInTheDocument()
     expect(screen.getAllByPlaceholderText('type your Fruits')).toHaveLength(2)
 
-    expect(container.queryByTestId('add_field')).toHaveTextContent('add Fruits')
+    expect(container.queryByTestId('add_field')).toHaveTextContent('Fruits')
 
     fireEvent.change(container.queryAllByTestId('option_field')[0], {
       target: { value: 'some value' }
